@@ -85,11 +85,9 @@ Take into account that you can choose other values. In the top bar, if you selec
 
 
 ## Documentation 📋
-First and second exercises:
-The entry point of the code is 'coin_data_download_and_store.py'.
-
-- The script only accepts dates in the format YYYY-MM-DD. The standard also accepts YYYYMMDD, so this could be a possible improvement of the code.
+- The entry point of the code is 'coin_data_download_and_store.py'.
+- The script only accepts dates in the YYYY-MM-DD format. The standard also accepts YYYYMMDD, so this could be a possible improvement of the code.
 - I avoided adding extra comments in the code, most of the methods are pretty simple (no tricky logic/algorithms), but another possible improvement of the code could be adding comments in the code (for example for the method that bulk download the files)
-- For the database, I use the same as used in Airflow, this is the reason why it is created from the airflow folder.
+- For the database, I used the same as used in Airflow, this is the reason why it is created from the airflow folder.
 - The table created should have a primary key, in this version it will allow replicated rows, which is not correct.
-- I used this [docker-compose](https://airflow.apache.org/docs/apache-airflow/stable/docker-compose.yaml) as template for the creation of Airflow with Celery executor and Postgresql in Docker.
+- I used this [docker-compose](https://airflow.apache.org/docs/apache-airflow/stable/docker-compose.yaml) as a template for the creation of Airflow with Celery executor and Postgresql in Docker.
