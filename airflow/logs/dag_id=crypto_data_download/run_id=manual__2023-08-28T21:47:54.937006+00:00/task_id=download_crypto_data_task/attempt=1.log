@@ -1,0 +1,33 @@
+[2023-08-28T21:47:56.449+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crypto_data_download.download_crypto_data_task manual__2023-08-28T21:47:54.937006+00:00 [queued]>
+[2023-08-28T21:47:56.459+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crypto_data_download.download_crypto_data_task manual__2023-08-28T21:47:54.937006+00:00 [queued]>
+[2023-08-28T21:47:56.460+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2023-08-28T21:47:56.475+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): download_crypto_data_task> on 2023-08-28 21:47:54.937006+00:00
+[2023-08-28T21:47:56.482+0000] {standard_task_runner.py:57} INFO - Started process 2964 to run task
+[2023-08-28T21:47:56.487+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'crypto_data_download', 'download_crypto_data_task', 'manual__2023-08-28T21:47:54.937006+00:00', '--job-id', '60', '--raw', '--subdir', 'DAGS_FOLDER/coin_data_dag.py', '--cfg-path', '/tmp/tmpzplsbnqs']
+[2023-08-28T21:47:56.491+0000] {standard_task_runner.py:85} INFO - Job 60: Subtask download_crypto_data_task
+[2023-08-28T21:47:56.547+0000] {task_command.py:415} INFO - Running <TaskInstance: crypto_data_download.download_crypto_data_task manual__2023-08-28T21:47:54.937006+00:00 [running]> on host e5729120e4b7
+[2023-08-28T21:47:56.638+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='your_name' AIRFLOW_CTX_DAG_ID='crypto_data_download' AIRFLOW_CTX_TASK_ID='download_crypto_data_task' AIRFLOW_CTX_EXECUTION_DATE='2023-08-28T21:47:54.937006+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-08-28T21:47:54.937006+00:00'
+[2023-08-28T21:47:57.497+0000] {logging_mixin.py:151} INFO - https://api.coingecko.com/api/v3/coins/bitcoin/history?date=01-08-2023
+[2023-08-28T21:47:57.499+0000] {logging_mixin.py:151} INFO - Data for 01-08-2023 downloaded and saved to crypto_data_01-08-2023.json!
+[2023-08-28T21:47:57.793+0000] {logging_mixin.py:151} INFO - https://api.coingecko.com/api/v3/coins/bitcoin/history?date=02-08-2023
+[2023-08-28T21:47:57.795+0000] {logging_mixin.py:151} INFO - Data for 02-08-2023 downloaded and saved to crypto_data_02-08-2023.json!
+[2023-08-28T21:47:58.082+0000] {logging_mixin.py:151} INFO - https://api.coingecko.com/api/v3/coins/bitcoin/history?date=03-08-2023
+[2023-08-28T21:47:58.084+0000] {logging_mixin.py:151} INFO - Data for 03-08-2023 downloaded and saved to crypto_data_03-08-2023.json!
+[2023-08-28T21:47:58.928+0000] {logging_mixin.py:151} INFO - https://api.coingecko.com/api/v3/coins/bitcoin/history?date=04-08-2023
+[2023-08-28T21:47:58.930+0000] {logging_mixin.py:151} INFO - Data for 04-08-2023 downloaded and saved to crypto_data_04-08-2023.json!
+[2023-08-28T21:47:59.221+0000] {logging_mixin.py:151} INFO - https://api.coingecko.com/api/v3/coins/bitcoin/history?date=05-08-2023
+[2023-08-28T21:47:59.224+0000] {logging_mixin.py:151} INFO - Data for 05-08-2023 downloaded and saved to crypto_data_05-08-2023.json!
+[2023-08-28T21:47:59.506+0000] {logging_mixin.py:151} INFO - https://api.coingecko.com/api/v3/coins/bitcoin/history?date=06-08-2023
+[2023-08-28T21:47:59.515+0000] {logging_mixin.py:151} INFO - Data for 06-08-2023 downloaded and saved to crypto_data_06-08-2023.json!
+[2023-08-28T21:48:00.051+0000] {logging_mixin.py:151} INFO - https://api.coingecko.com/api/v3/coins/bitcoin/history?date=07-08-2023
+[2023-08-28T21:48:00.064+0000] {logging_mixin.py:151} INFO - Data for 07-08-2023 downloaded and saved to crypto_data_07-08-2023.json!
+[2023-08-28T21:48:00.377+0000] {logging_mixin.py:151} INFO - https://api.coingecko.com/api/v3/coins/bitcoin/history?date=08-08-2023
+[2023-08-28T21:48:00.379+0000] {logging_mixin.py:151} INFO - Data for 08-08-2023 downloaded and saved to crypto_data_08-08-2023.json!
+[2023-08-28T21:48:00.716+0000] {logging_mixin.py:151} INFO - https://api.coingecko.com/api/v3/coins/bitcoin/history?date=09-08-2023
+[2023-08-28T21:48:00.718+0000] {logging_mixin.py:151} INFO - Data for 09-08-2023 downloaded and saved to crypto_data_09-08-2023.json!
+[2023-08-28T21:48:01.077+0000] {logging_mixin.py:151} INFO - https://api.coingecko.com/api/v3/coins/bitcoin/history?date=10-08-2023
+[2023-08-28T21:48:01.079+0000] {logging_mixin.py:151} INFO - Data for 10-08-2023 downloaded and saved to crypto_data_10-08-2023.json!
+[2023-08-28T21:48:01.081+0000] {python.py:194} INFO - Done. Returned value was: None
+[2023-08-28T21:48:01.093+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=crypto_data_download, task_id=download_crypto_data_task, execution_date=20230828T214754, start_date=20230828T214756, end_date=20230828T214801
+[2023-08-28T21:48:01.137+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-08-28T21:48:01.156+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check

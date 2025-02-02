@@ -1,0 +1,22 @@
+[2023-09-01T02:15:44.583+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crypto_data_download.create_table_task scheduled__2023-08-30T21:09:49.059324+00:00 [queued]>
+[2023-09-01T02:15:44.594+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crypto_data_download.create_table_task scheduled__2023-08-30T21:09:49.059324+00:00 [queued]>
+[2023-09-01T02:15:44.595+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2023-09-01T02:15:44.616+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): create_table_task> on 2023-08-30 21:09:49.059324+00:00
+[2023-09-01T02:15:44.624+0000] {standard_task_runner.py:57} INFO - Started process 10443 to run task
+[2023-09-01T02:15:44.628+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'crypto_data_download', 'create_table_task', 'scheduled__2023-08-30T21:09:49.059324+00:00', '--job-id', '171', '--raw', '--subdir', 'DAGS_FOLDER/coin_data_dag.py', '--cfg-path', '/tmp/tmp6qo2jx67']
+[2023-09-01T02:15:44.633+0000] {standard_task_runner.py:85} INFO - Job 171: Subtask create_table_task
+[2023-09-01T02:15:44.690+0000] {task_command.py:415} INFO - Running <TaskInstance: crypto_data_download.create_table_task scheduled__2023-08-30T21:09:49.059324+00:00 [running]> on host 6c9aee5df47e
+[2023-09-01T02:15:44.783+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='NicoB' AIRFLOW_CTX_DAG_ID='crypto_data_download' AIRFLOW_CTX_TASK_ID='create_table_task' AIRFLOW_CTX_EXECUTION_DATE='2023-08-30T21:09:49.059324+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-08-30T21:09:49.059324+00:00'
+[2023-09-01T02:15:44.794+0000] {base.py:73} INFO - Using connection ID 'postgres_connection' for task execution.
+[2023-09-01T02:15:44.798+0000] {sql.py:418} INFO - Running statement: 
+    CREATE TABLE IF NOT EXISTS coin_data(
+        coin_id VARCHAR NOT NULL,
+        date DATE NOT NULL,
+        price_usd FLOAT,
+        json_response JSON
+    );
+    , parameters: None
+[2023-09-01T02:15:44.800+0000] {python.py:194} INFO - Done. Returned value was: None
+[2023-09-01T02:15:44.809+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=crypto_data_download, task_id=create_table_task, execution_date=20230830T210949, start_date=20230901T021544, end_date=20230901T021544
+[2023-09-01T02:15:44.842+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-09-01T02:15:44.873+0000] {taskinstance.py:2784} INFO - 1 downstream tasks scheduled from follow-on schedule check

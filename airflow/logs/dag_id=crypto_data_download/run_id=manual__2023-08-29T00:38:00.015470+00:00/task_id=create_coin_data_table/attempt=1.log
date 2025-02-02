@@ -1,0 +1,32 @@
+[2023-08-29T00:38:01.623+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crypto_data_download.create_coin_data_table manual__2023-08-29T00:38:00.015470+00:00 [queued]>
+[2023-08-29T00:38:01.633+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crypto_data_download.create_coin_data_table manual__2023-08-29T00:38:00.015470+00:00 [queued]>
+[2023-08-29T00:38:01.633+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2023-08-29T00:38:01.649+0000] {taskinstance.py:1382} INFO - Executing <Task(PostgresOperator): create_coin_data_table> on 2023-08-29 00:38:00.015470+00:00
+[2023-08-29T00:38:01.655+0000] {standard_task_runner.py:57} INFO - Started process 409 to run task
+[2023-08-29T00:38:01.660+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'crypto_data_download', 'create_coin_data_table', 'manual__2023-08-29T00:38:00.015470+00:00', '--job-id', '107', '--raw', '--subdir', 'DAGS_FOLDER/coin_data_dag.py', '--cfg-path', '/tmp/tmpuf1r5kyg']
+[2023-08-29T00:38:01.666+0000] {standard_task_runner.py:85} INFO - Job 107: Subtask create_coin_data_table
+[2023-08-29T00:38:01.727+0000] {task_command.py:415} INFO - Running <TaskInstance: crypto_data_download.create_coin_data_table manual__2023-08-29T00:38:00.015470+00:00 [running]> on host 6c9aee5df47e
+[2023-08-29T00:38:01.817+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='NicoB' AIRFLOW_CTX_DAG_ID='crypto_data_download' AIRFLOW_CTX_TASK_ID='create_coin_data_table' AIRFLOW_CTX_EXECUTION_DATE='2023-08-29T00:38:00.015470+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-08-29T00:38:00.015470+00:00'
+[2023-08-29T00:38:01.819+0000] {sql.py:274} INFO - Executing: 
+    CREATE TABLE IF NOT EXISTS coin_data (
+        coin VARCHAR NOT NULL, 
+        date DATE NOT NULL, 
+        price FLOAT, 
+        json JSON, 
+        PRIMARY KEY (coin, date)
+    );
+    
+[2023-08-29T00:38:01.829+0000] {base.py:73} INFO - Using connection ID 'postgres_connection' for task execution.
+[2023-08-29T00:38:01.838+0000] {base.py:73} INFO - Using connection ID 'postgres_connection' for task execution.
+[2023-08-29T00:38:01.843+0000] {sql.py:418} INFO - Running statement: 
+    CREATE TABLE IF NOT EXISTS coin_data (
+        coin VARCHAR NOT NULL, 
+        date DATE NOT NULL, 
+        price FLOAT, 
+        json JSON, 
+        PRIMARY KEY (coin, date)
+    );
+    , parameters: None
+[2023-08-29T00:38:01.854+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=crypto_data_download, task_id=create_coin_data_table, execution_date=20230829T003800, start_date=20230829T003801, end_date=20230829T003801
+[2023-08-29T00:38:01.873+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-08-29T00:38:01.902+0000] {taskinstance.py:2784} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,37 @@
+[2023-08-29T00:22:42.202+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crypto_data_download.create_books_table manual__2023-08-29T00:17:36.948580+00:00 [queued]>
+[2023-08-29T00:22:42.211+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crypto_data_download.create_books_table manual__2023-08-29T00:17:36.948580+00:00 [queued]>
+[2023-08-29T00:22:42.211+0000] {taskinstance.py:1361} INFO - Starting attempt 2 of 2
+[2023-08-29T00:22:42.226+0000] {taskinstance.py:1382} INFO - Executing <Task(PostgresOperator): create_books_table> on 2023-08-29 00:17:36.948580+00:00
+[2023-08-29T00:22:42.231+0000] {standard_task_runner.py:57} INFO - Started process 154 to run task
+[2023-08-29T00:22:42.236+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'crypto_data_download', 'create_books_table', 'manual__2023-08-29T00:17:36.948580+00:00', '--job-id', '99', '--raw', '--subdir', 'DAGS_FOLDER/coin_data_dag.py', '--cfg-path', '/tmp/tmp2im6ruho']
+[2023-08-29T00:22:42.240+0000] {standard_task_runner.py:85} INFO - Job 99: Subtask create_books_table
+[2023-08-29T00:22:42.295+0000] {task_command.py:415} INFO - Running <TaskInstance: crypto_data_download.create_books_table manual__2023-08-29T00:17:36.948580+00:00 [running]> on host 6c9aee5df47e
+[2023-08-29T00:22:42.403+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='your_name' AIRFLOW_CTX_DAG_ID='crypto_data_download' AIRFLOW_CTX_TASK_ID='create_books_table' AIRFLOW_CTX_EXECUTION_DATE='2023-08-29T00:17:36.948580+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-08-29T00:17:36.948580+00:00'
+[2023-08-29T00:22:42.405+0000] {sql.py:274} INFO - Executing: 
+    CREATE TABLE IF NOT EXISTS books (
+        id SERIAL PRIMARY KEY,
+        title VARCHAR(255),
+        author VARCHAR(255)
+    );
+    
+[2023-08-29T00:22:42.416+0000] {base.py:73} INFO - Using connection ID 'postgres_connection' for task execution.
+[2023-08-29T00:22:42.428+0000] {base.py:73} INFO - Using connection ID 'postgres_connection' for task execution.
+[2023-08-29T00:22:42.429+0000] {taskinstance.py:1943} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/operators/sql.py", line 280, in execute
+    output = hook.run(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/hooks/sql.py", line 385, in run
+    with closing(self.get_conn()) as conn:
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/postgres/hooks/postgres.py", line 154, in get_conn
+    self.conn = psycopg2.connect(**conn_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "127.0.0.1", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+[2023-08-29T00:22:42.440+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=crypto_data_download, task_id=create_books_table, execution_date=20230829T001736, start_date=20230829T002242, end_date=20230829T002242
+[2023-08-29T00:22:42.453+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 99 for task create_books_table (connection to server at "127.0.0.1", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+; 154)
+[2023-08-29T00:22:42.489+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-08-29T00:22:42.510+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check

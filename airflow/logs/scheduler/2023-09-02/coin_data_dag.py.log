@@ -1,0 +1,28 @@
+[2023-09-02T03:00:13.063+0000] {processor.py:157} INFO - Started process (PID=73906) to work on /opt/airflow/dags/coin_data_dag.py
+[2023-09-02T03:00:13.065+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/coin_data_dag.py for tasks to queue
+[2023-09-02T03:00:13.067+0000] {logging_mixin.py:151} INFO - [2023-09-02T03:00:13.067+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/coin_data_dag.py
+[2023-09-02T03:00:13.154+0000] {processor.py:839} INFO - DAG(s) dict_keys(['crypto_data_download']) retrieved from /opt/airflow/dags/coin_data_dag.py
+[2023-09-02T03:00:13.165+0000] {logging_mixin.py:151} INFO - [2023-09-02T03:00:13.165+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2023-09-02T03:00:13.188+0000] {logging_mixin.py:151} INFO - [2023-09-02T03:00:13.188+0000] {dag.py:3677} INFO - Setting next_dagrun for crypto_data_download to 2023-09-01T21:09:49.059324+00:00, run_after=2023-09-02T21:09:49.059324+00:00
+[2023-09-02T03:00:13.205+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/coin_data_dag.py took 0.153 seconds
+[2023-09-02T04:41:56.145+0000] {processor.py:157} INFO - Started process (PID=73960) to work on /opt/airflow/dags/coin_data_dag.py
+[2023-09-02T04:41:56.147+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/coin_data_dag.py for tasks to queue
+[2023-09-02T04:41:56.149+0000] {logging_mixin.py:151} INFO - [2023-09-02T04:41:56.149+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/coin_data_dag.py
+[2023-09-02T04:41:56.231+0000] {processor.py:839} INFO - DAG(s) dict_keys(['crypto_data_download']) retrieved from /opt/airflow/dags/coin_data_dag.py
+[2023-09-02T04:41:56.244+0000] {logging_mixin.py:151} INFO - [2023-09-02T04:41:56.243+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2023-09-02T04:41:56.267+0000] {logging_mixin.py:151} INFO - [2023-09-02T04:41:56.267+0000] {dag.py:3677} INFO - Setting next_dagrun for crypto_data_download to 2023-09-01T21:09:49.059324+00:00, run_after=2023-09-02T21:09:49.059324+00:00
+[2023-09-02T04:41:56.293+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/coin_data_dag.py took 0.156 seconds
+[2023-09-02T11:08:25.285+0000] {processor.py:157} INFO - Started process (PID=74015) to work on /opt/airflow/dags/coin_data_dag.py
+[2023-09-02T11:08:25.295+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/coin_data_dag.py for tasks to queue
+[2023-09-02T11:08:25.297+0000] {logging_mixin.py:151} INFO - [2023-09-02T11:08:25.296+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/coin_data_dag.py
+[2023-09-02T11:08:25.457+0000] {processor.py:839} INFO - DAG(s) dict_keys(['crypto_data_download']) retrieved from /opt/airflow/dags/coin_data_dag.py
+[2023-09-02T11:08:25.478+0000] {logging_mixin.py:151} INFO - [2023-09-02T11:08:25.478+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2023-09-02T11:08:25.540+0000] {logging_mixin.py:151} INFO - [2023-09-02T11:08:25.540+0000] {dag.py:3677} INFO - Setting next_dagrun for crypto_data_download to 2023-09-01T21:09:49.059324+00:00, run_after=2023-09-02T21:09:49.059324+00:00
+[2023-09-02T11:08:25.599+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/coin_data_dag.py took 0.319 seconds
+[2023-09-02T19:21:14.954+0000] {processor.py:157} INFO - Started process (PID=74070) to work on /opt/airflow/dags/coin_data_dag.py
+[2023-09-02T19:21:14.958+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/coin_data_dag.py for tasks to queue
+[2023-09-02T19:21:14.963+0000] {logging_mixin.py:151} INFO - [2023-09-02T19:21:14.961+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/coin_data_dag.py
+[2023-09-02T19:21:15.170+0000] {processor.py:839} INFO - DAG(s) dict_keys(['crypto_data_download']) retrieved from /opt/airflow/dags/coin_data_dag.py
+[2023-09-02T19:21:15.199+0000] {logging_mixin.py:151} INFO - [2023-09-02T19:21:15.198+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2023-09-02T19:21:15.259+0000] {logging_mixin.py:151} INFO - [2023-09-02T19:21:15.258+0000] {dag.py:3677} INFO - Setting next_dagrun for crypto_data_download to 2023-09-01T21:09:49.059324+00:00, run_after=2023-09-02T21:09:49.059324+00:00
+[2023-09-02T19:21:15.307+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/coin_data_dag.py took 0.370 seconds

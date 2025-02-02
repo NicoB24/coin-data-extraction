@@ -1,0 +1,6 @@
+flake8
+pytest
+pytest-asyncio
+psycopg2-binary
+requests
+sqlalchemy

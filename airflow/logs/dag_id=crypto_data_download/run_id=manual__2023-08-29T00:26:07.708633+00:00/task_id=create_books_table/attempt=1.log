@@ -1,0 +1,28 @@
+[2023-08-29T00:26:09.625+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crypto_data_download.create_books_table manual__2023-08-29T00:26:07.708633+00:00 [queued]>
+[2023-08-29T00:26:09.635+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crypto_data_download.create_books_table manual__2023-08-29T00:26:07.708633+00:00 [queued]>
+[2023-08-29T00:26:09.636+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2023-08-29T00:26:09.654+0000] {taskinstance.py:1382} INFO - Executing <Task(PostgresOperator): create_books_table> on 2023-08-29 00:26:07.708633+00:00
+[2023-08-29T00:26:09.659+0000] {standard_task_runner.py:57} INFO - Started process 207 to run task
+[2023-08-29T00:26:09.671+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'crypto_data_download', 'create_books_table', 'manual__2023-08-29T00:26:07.708633+00:00', '--job-id', '100', '--raw', '--subdir', 'DAGS_FOLDER/coin_data_dag.py', '--cfg-path', '/tmp/tmpdprudn63']
+[2023-08-29T00:26:09.681+0000] {standard_task_runner.py:85} INFO - Job 100: Subtask create_books_table
+[2023-08-29T00:26:09.776+0000] {task_command.py:415} INFO - Running <TaskInstance: crypto_data_download.create_books_table manual__2023-08-29T00:26:07.708633+00:00 [running]> on host 6c9aee5df47e
+[2023-08-29T00:26:09.883+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='your_name' AIRFLOW_CTX_DAG_ID='crypto_data_download' AIRFLOW_CTX_TASK_ID='create_books_table' AIRFLOW_CTX_EXECUTION_DATE='2023-08-29T00:26:07.708633+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-08-29T00:26:07.708633+00:00'
+[2023-08-29T00:26:09.885+0000] {sql.py:274} INFO - Executing: 
+    CREATE TABLE IF NOT EXISTS books (
+        id SERIAL PRIMARY KEY,
+        title VARCHAR(255),
+        author VARCHAR(255)
+    );
+    
+[2023-08-29T00:26:09.896+0000] {base.py:73} INFO - Using connection ID 'postgres_connection' for task execution.
+[2023-08-29T00:26:09.907+0000] {base.py:73} INFO - Using connection ID 'postgres_connection' for task execution.
+[2023-08-29T00:26:09.911+0000] {sql.py:418} INFO - Running statement: 
+    CREATE TABLE IF NOT EXISTS books (
+        id SERIAL PRIMARY KEY,
+        title VARCHAR(255),
+        author VARCHAR(255)
+    );
+    , parameters: None
+[2023-08-29T00:26:09.928+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=crypto_data_download, task_id=create_books_table, execution_date=20230829T002607, start_date=20230829T002609, end_date=20230829T002609
+[2023-08-29T00:26:09.962+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-08-29T00:26:09.980+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check

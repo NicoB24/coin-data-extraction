@@ -1,0 +1,26 @@
+[2023-08-28T21:24:06.091+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crypto_data_download.download_crypto_data_task manual__2023-08-28T21:19:02.324165+00:00 [queued]>
+[2023-08-28T21:24:06.101+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crypto_data_download.download_crypto_data_task manual__2023-08-28T21:19:02.324165+00:00 [queued]>
+[2023-08-28T21:24:06.102+0000] {taskinstance.py:1361} INFO - Starting attempt 2 of 2
+[2023-08-28T21:24:06.117+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): download_crypto_data_task> on 2023-08-28 21:19:02.324165+00:00
+[2023-08-28T21:24:06.123+0000] {standard_task_runner.py:57} INFO - Started process 2590 to run task
+[2023-08-28T21:24:06.128+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'crypto_data_download', 'download_crypto_data_task', 'manual__2023-08-28T21:19:02.324165+00:00', '--job-id', '57', '--raw', '--subdir', 'DAGS_FOLDER/coin_data_dag.py', '--cfg-path', '/tmp/tmpy1gtypp0']
+[2023-08-28T21:24:06.132+0000] {standard_task_runner.py:85} INFO - Job 57: Subtask download_crypto_data_task
+[2023-08-28T21:24:06.193+0000] {task_command.py:415} INFO - Running <TaskInstance: crypto_data_download.download_crypto_data_task manual__2023-08-28T21:19:02.324165+00:00 [running]> on host e5729120e4b7
+[2023-08-28T21:24:06.287+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='your_name' AIRFLOW_CTX_DAG_ID='crypto_data_download' AIRFLOW_CTX_TASK_ID='download_crypto_data_task' AIRFLOW_CTX_EXECUTION_DATE='2023-08-28T21:19:02.324165+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-08-28T21:19:02.324165+00:00'
+[2023-08-28T21:24:06.299+0000] {taskinstance.py:1943} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/coin_data_dag.py", line 38, in download_crypto_data_for_range
+    download_crypto_data_for_date(current_date.strftime('%Y-%m-%d'))
+  File "/opt/airflow/dags/coin_data_dag.py", line 19, in download_crypto_data_for_date
+    api_key = Variable.get("crypto_api_key")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/variable.py", line 140, in get
+    raise KeyError(f"Variable {key} does not exist")
+KeyError: 'Variable crypto_api_key does not exist'
+[2023-08-28T21:24:06.310+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=crypto_data_download, task_id=download_crypto_data_task, execution_date=20230828T211902, start_date=20230828T212406, end_date=20230828T212406
+[2023-08-28T21:24:06.323+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 57 for task download_crypto_data_task ('Variable crypto_api_key does not exist'; 2590)
+[2023-08-28T21:24:06.341+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-08-28T21:24:06.361+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check
