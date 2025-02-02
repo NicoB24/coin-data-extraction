@@ -6,7 +6,7 @@ Python version: Python 3.9.2
 
 ## Installation ⚙️
 
-_Go to the airflow directory (only for this 2 commands)  and run the docker cointaners:_
+_Go to the airflow directory (only for this 2 commands)  and run the docker containers:_
 ```
 docker-compose up airflow-init
 docker-compose up -d
