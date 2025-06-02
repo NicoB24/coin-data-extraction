@@ -64,7 +64,7 @@ password: airflow
 ```
 
 In order to run the ETL in Airflow, you have to follow these steps:
-- Create a new database in your postgres called 'airflow_db'
+- Create a new database in your postgres called 'airflow_db'.
 - Open your browser and go to 'http://localhost:8080/'. In the top bar, go to Admin->Connections and configure the postgres connection with this parameters:
 ```
 Connection Id: postgres_connection
